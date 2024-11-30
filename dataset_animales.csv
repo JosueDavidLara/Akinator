@@ -1,0 +1,68 @@
+Vertebrado,Clasificacion,Locomocion,Reproduccion,Tamano,Dieta,Patas,Piel,Domestico,Mitologico,Caracteristica,Animal
+1,Mamifero,Terrestre,Viviparo,Mediano,Omnivoro,4,Pelaje,1,0,Ladra,Perro
+1,Mamifero,Terrestre,Viviparo,Pequeno,Carnivoro,4,Pelaje,1,0,Maulla,Gato
+1,Mamifero,Terrestre,Viviparo,Grande,Carnivoro,4,Pelaje,0,0,Melena,Leon
+1,Mamifero,Terrestre,Viviparo,Grande,Carnivoro,4,Pelaje,0,0,Rayas,Tigre
+1,Mamifero,Terrestre,Viviparo,Grande,Carnivoro,4,Pelaje,0,0,Sigilo,Puma
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Piel desnuda,0,0,Trompa,Elefante
+1,Ave,Volador,Oviparo,Grande,Carnivoro,2,Plumas,0,0,Vision,Aguila
+1,Ave,Volador,Oviparo,Mediano,Omnivoro,2,Plumas,1,0,Nadar,Pato
+1,Pez,Acuatico,Ovoviviparo,Grande,Carnivoro,0,Piel desnuda,0,0,Sale en una pelicula,Tiburon
+1,Mamifero,Acuatico,Viviparo,Mediano,Carnivoro,0,Piel desnuda,0,0,Inteligencia,Delin
+1,Reptil,Terrestre,Oviparo,Mediano,Carnivoro,0,Escamas,0,0,Veneno,Serpiente
+1,Ave,Volador,Oviparo,Grande,Omnivoro,2,Plumas,0,0,Carronero,Zopilote
+1,Reptil,Acuatico,Oviparo,Grande,Carnivoro,4,Escamas,0,0,Arrastrarse,Cocodrilo
+1,Ave,Volador,Oviparo,Pequeno,Omnivoro,2,Plumas,0,0,Pesca,Gaviota
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Pelaje,0,0,Boxea,Canguro
+1,Ave,Terrestre,Oviparo,Mediano,Carnivoro,2,Plumas,0,0,Pesca,Pinguino
+1,Ave,Volador,Oviparo,Grande,Carnivoro,2,Plumas,0,0,Velocidad,Halcon
+1,Mamifero,Terrestre,Oviparo,Pequeno,Omnivoro,4,Pelaje,0,0,Pico,Ornitorrinco
+1,Mamifero,Terrestre,Viviparo,Pequeno,Omnivoro,4,Pelaje,0,0,Astucia,Zorro
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Pelaje,1,0,Velocidad,Caballo
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Pelaje,0,0,Rayas,Cebra
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Pelaje,0,0,Cuello,Jirafa
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Piel desnuda,0,0,Cuerno,Rinoceronte
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Piel desnuda,0,0,Nadar,Hipopotamo
+1,Mamifero,Volador,Viviparo,Pequeno,Omnivoro,2,Pelaje,0,0,Nocturno,Murcielago
+1,Ave,Volador,Oviparo,Pequeno,Omnivoro,2,Plumas,0,0,Nocturno,Buho
+1,Mamifero,Terrestre,Viviparo,Grande,Omnivoro,4,Pelaje,0,0,Hiberna,Oso
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,4,Pelaje,0,0,Bambu,Panda
+1,Mamifero,Terrestre,Viviparo,Pequeno,Herviboro,4,Pelaje,0,0,Escala,Ardilla
+1,Mamifero,Terrestre,Viviparo,Mediano,Omnivoro,4,Pelaje,0,0,Basura,Mapache
+1,Mamifero,Terrestre,Viviparo,Pequeno,Herviboro,4,Pelaje,1,0,Orejas grandes,Conejo
+0,Insecto,Terrestre,Oviparo,Pequeno,Carnivoro,1000,Exoesqueleto,0,0,Muchas patas,Ciempies
+1,Mamifero,Terrestre,Viviparo,Grande,Herviboro,2,Pelaje,0,0,Fuerza,Gorila
+1,Mamifero,Terrestre,Viviparo,Mediano,Omnivoro,2,Pelaje,0,0,Uso de herramientas,Chimpance
+1,Mamifero,Acuatico,Viviparo,Grande,Carnivoro,0,Piel desnuda,0,0,Migran,Ballena
+1,Pez,Acuatico,Oviparo,Pequeno,Omnivoro,0,Escamas,0,0,Anemona,Pez Payaso
+1,Ave,Volador,Oviparo,Pequeno,Omnivoro,2,Plumas,1,0,Imita,Loro
+1,Reptil,Terrestre,Oviparo,Grande,Carnivoro,4,Escamas,0,0,Camuflaje,Camaleon
+1,Reptil,Acuatico,Oviparo,Pequeno,Omnivoro,4,Escamas,1,0,Caparazon,Tortuga
+1,Reptil,Terrestre,Oviparo,Pequeno,Herviboro,4,Escamas,0,0,Sopa,Iguana
+0,Crustaceo,Acuatico,Oviparo,Pequeno,Omnivoro,8,Exoesqueleto,0,0,Sopa,Cangrejo
+0,Insecto,Terrestre,Oviparo,Pequeno,Carnivoro,8,Exoesqueleto,0,0,Telarana,Arana
+0,Insecto,Terrestre,Oviparo,Pequeno,Carnivoro,8,Exoesqueleto,0,0,Veneno,Alacran
+0,Molusco,Acuatico,Oviparo,Pequeno,Omnivoro,1000,Piel desnuda,0,0,Regeneracion,Estrella de Mar
+0,Molusco,Acuatico,Oviparo,Grande,Carnivoro,8,Piel desnuda,0,0,Alargado,Calamar
+1,Pez,Acuatico,Oviparo,Mediano,Carnivoro,0,Escamas,0,0,Pico,Pez Espada
+0,Molusco,Acuatico,Oviparo,Grande,Carnivoro,8,Piel desnuda,0,0,Redondo,Pulpo
+1,Reptil,Terrestre,Oviparo,Grande,Carnivoro,4,Escamas,0,0,Veneno,Dragon de Komodo
+1,Reptil,Terrestre,Oviparo,Pequeno,Carnivoro,4,Escamas,0,0,Escala,Geco
+1,Mamifero,Terrestre,Viviparo,Pequeno,Omnivoro,4,Pelaje,0,0,Sale en una pel�cula,Suricata
+1,Mamifero,Terrestre,Viviparo,Pequeno,Omnivoro,4,Pelaje,0,0,Puas,Erizo
+1,Mamifero,Terrestre,Viviparo,Grande,Carnivoro,4,Pelaje,0,0,Fuerza,Jaguar
+0,Molusco,Acuatico,Oviparo,Pequeno,Herviboro,0,Piel desnuda,0,0,Concha,Caracol
+1,Pez,Acuatico,Oviparo,Pequeno,Herviboro,0,Piel desnuda,0,0,Embarazo masculino,Caballito de Mar
+0,Insecto,Terrestre,Oviparo,Pequeno,Omnivoro,6,Exoesqueleto,0,0,Colonia,Hormiga
+0,Insecto,Volador,Oviparo,Pequeno,Omnivoro,6,Exoesqueleto,0,0,Miel,Abeja
+0,Insecto,Volador,Oviparo,Pequeno,Omnivoro,6,Exoesqueleto,0,0,Aguijon,Avispa
+0,Molusco,Acuatico,Oviparo,Mediano,Carnivoro,0,Piel desnuda,0,0,Electricidad,Medusa
+1,Ave,Terrestre,Oviparo,Mediano,Omnivoro,2,Plumas,0,0,Cuello,Ganso
+1,Ave,Terrestre,Oviparo,Grande,Omnivoro,2,Plumas,0,0,Rosado,Flamenco
+1,Ave,Terrestre,Oviparo,Grande,Herviboro,2,Plumas,0,0,Tamano,Emu
+1,Ave,Terrestre,Oviparo,Mediano,Omnivoro,2,Plumas,0,0,Colorido,Pavo Real
+1,Ave,Terrestre,Oviparo,Grande,Carnivoro,2,Plumas,0,0,Tamano,Pinguino Emperador
+1,Ave,Volador,Oviparo,Pequeno,Carnivoro,2,Plumas,0,0,Pico,Pajaro Carpintero
+1,Ave,Volador,Oviparo,Pequeno,Herviboro,2,Plumas,0,0,Floral,Colibri
+1,Ave,Volador,Oviparo,Pequeno,Omnivoro,2,Plumas,0,0,Inteligencia,Cuervo
+1,Ave,Terrestre,Oviparo,Pequeno,Omnivoro,2,Plumas,0,0,Velocidad,Correcaminos
