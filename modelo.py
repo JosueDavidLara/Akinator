@@ -3,6 +3,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier, plot_tree, _tree
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
+import json
 
 # ----------------------------------CREACION DEL MODELO----------------------------------
 
@@ -87,3 +88,37 @@ def generate_questions(Features, criteria_dict):
 
 # Generar preguntas
 questions = generate_questions(X.columns, criteria_dict)
+
+# ----------------------------------EXPORTACION DEL MODELO----------------------------------
+
+
+# Función para convertir el árbol de decisión en JSON
+def tree_to_json(tree, feature_names, class_names):
+    tree_ = tree.tree_
+    feature_name = [
+        feature_names[i] if i != _tree.TREE_UNDEFINED else "undefined!"
+        for i in tree_.feature
+    ]
+
+    def recurse(node):
+        if tree_.feature[node] != _tree.TREE_UNDEFINED:
+            # Nodo interno: incluye la característica y los hijos
+            return {
+                "question": feature_name[node],
+                "threshold": tree_.threshold[node],
+                "yes": recurse(tree_.children_right[node]),
+                "no": recurse(tree_.children_left[node]),
+            }
+        else:
+            # Nodo hoja: incluye la predicción
+            predicted_class_index = tree_.value[node].argmax()
+            predicted_class = class_names[predicted_class_index]
+            return {"prediction": predicted_class}
+
+    return recurse(0)
+
+
+# Exportar el árbol como JSON
+tree_json = tree_to_json(model, questions, model.classes_)
+with open("animal_tree.json", "w") as f:
+    json.dump(tree_json, f, indent=2)
