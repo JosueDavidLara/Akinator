@@ -40,7 +40,7 @@ Vertebrado,Clasificacion,Locomocion,Tamano,Dieta,Reproduccion,Patas,Piel,Domesti
 1,Mamifero,Terrestre,Pequeno,Herviboro,Viviparo,4,Escamas,0,0,Caparazon ,Armadillo
 1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,0,0,Astucia,Zorro
 1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,0,0,roedor,Raton
-1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,0,0,Sale en una pel�cula,Suricata
+1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,0,0,Sale en una pelicula,Suricata
 1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,0,0,Puas,Erizo
 1,Mamifero,Terrestre,Pequeno,Omnivoro,Viviparo,4,Pelaje,1,0,de consumo,Cerdo
 1,Mamifero,Terrestre,Pequeno,Omnivoro,Ovoviviparo,4,Pelaje,0,0,Pico,Ornitorrinco
@@ -58,7 +58,7 @@ Vertebrado,Clasificacion,Locomocion,Tamano,Dieta,Reproduccion,Patas,Piel,Domesti
 1,Ave,Terrestre,Mediano,Carnivoro,Oviparo,2,Plumas,0,0,Pesca,Pinguino
 1,Ave,Terrestre,Mediano,Omnivoro,Oviparo,2,Plumas,0,0,Cuello,Ganso
 1,Ave,Terrestre,Mediano,Omnivoro,Oviparo,2,Plumas,0,0,Colorido,Pavo Real
-1,Ave,Volador,Grande,Carnivoro,Oviparo,2,Plumas,0,0,animal nacional ,A�guila
+1,Ave,Volador,Grande,Carnivoro,Oviparo,2,Plumas,0,0,animal nacional ,Aguila
 1,Ave,Volador,Grande,Carnivoro,Oviparo,2,Plumas,0,0,Velocidad,Halcon
 1,Ave,Volador,Grande,Omnivoro,Oviparo,2,Plumas,0,0,Carronero,Zopilote
 1,Ave,Volador,Mediano,Carnivoro,Oviparo,2,Plumas,0,0,Pesca,Pelicano

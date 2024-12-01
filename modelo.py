@@ -60,3 +60,30 @@ print(f"Precisión del modelo: {(model.score(X_test, y_test)*100):.2f}%")
 #     fontsize=10,
 # )
 # plt.show()
+
+# ----------------------------------GENERACION DE PREGUNTAS DINAMICAS----------------------------------
+
+# Cargar el diccionario
+df = pd.read_csv("./Diccionario test.csv")
+criteria_dict = dict(zip(df["Criterio"], df["Puente"]))
+
+
+# Función para generar preguntas dinámicas
+def generate_questions(Features, criteria_dict):
+    questions = []
+    for feature in Features:
+        # Verificar si la característica esta en el diccionario
+        if feature in criteria_dict:
+            puente = criteria_dict[feature]
+        else:
+            puente = f"es {feature.lower()}"
+
+        # Generar la pregunta en el formato "¿Tu animal [puente] [columna]?"
+        new_brige = puente.replace("[columna_criterio]", feature.lower())
+        question = f"¿Tu animal {new_brige}?"
+        questions.append(question)
+    return questions
+
+
+# Generar preguntas
+questions = generate_questions(X.columns, criteria_dict)
