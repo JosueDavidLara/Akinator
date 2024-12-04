@@ -19,26 +19,42 @@ categorical_columns = [
     "Dieta",
     "Patas",
     "Piel",
-    "Caracteristica",
 ]
 
-# Usar pd.get_dummies para convertir las columnas categóricas en variables dummy
+#  Consolidar las columnas de características múltiples en una sola
+characteristic_columns = ["Caracteristica", "Caracteristica2"]
+data["CaracteristicasUnicas"] = data[characteristic_columns].apply(
+    lambda row: ";".join([str(x) for x in row if pd.notnull(x)]), axis=1
+)
+
+# Crear dummies para las características únicas
+dummies = data["CaracteristicasUnicas"].str.get_dummies(sep=";")
+
+# Añadir las columnas dummy de CaracteristicasUnicas al dataframe original
+data = pd.concat([data, dummies], axis=1)
+
+# Convertir las demás columnas categóricas en variables dummy
 data = pd.get_dummies(
     data, columns=categorical_columns, drop_first=True, prefix="", prefix_sep=""
 )
 
+# Eliminar columnas innecesarias
+data = data.drop(columns=["Caracteristica", "Caracteristica2", "CaracteristicasUnicas"])
+
 # Mostrar el dataframe procesado
-# print(data.info())
+column_list = data.drop(columns=["Animal"]).columns.tolist()
+print(column_list, len(column_list))
+print(data[data["Animal"] == "Cabra"][["Cuernos"]])
 
 # Separar las características (X) y la etiqueta (y)
 X = data.drop(columns=["Animal"])
 y = data["Animal"]
 
 # Dividir en conjunto de entrenamiento y conjunto de prueba aunque el entrenamiento será con el 100% de los datos
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.7)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.99)
 
 # Crear y entrenar el modelo de árbol de decisión
-model = DecisionTreeClassifier(max_depth=34)
+model = DecisionTreeClassifier(max_depth=45)
 model.fit(X, y)
 
 # ----------------------------------EVALUACION DEL MODELO----------------------------------
@@ -65,7 +81,7 @@ print(f"Precisión del modelo: {(model.score(X_test, y_test)*100):.2f}%")
 # ----------------------------------GENERACION DE PREGUNTAS DINAMICAS----------------------------------
 
 # Cargar el diccionario
-df = pd.read_csv("./Diccionario test.csv")
+df = pd.read_csv("./Diccionario alpha.csv")
 criteria_dict = dict(zip(df["Criterio"], df["Puente"]))
 
 
