@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 import json
 
-# ----------------------------------CREACION DEL MODELO----------------------------------
+# ----------------------------------TRATAMIENTO DE DATOS----------------------------------
 
 # Cargar los datos
 data = pd.read_csv("./dataset_animales.csv")
@@ -13,7 +13,6 @@ data = pd.read_csv("./dataset_animales.csv")
 # Seleccionar las columnas con variables categóricas para convertirlas en variables dummy
 categorical_columns = [
     "Clasificacion",
-    "Locomocion",
     "Reproduccion",
     "Tamano",
     "Dieta",
@@ -21,17 +20,34 @@ categorical_columns = [
     "Piel",
 ]
 
-#  Consolidar las columnas de características múltiples en una sola
-characteristic_columns = ["Caracteristica", "Caracteristica2"]
-data["CaracteristicasUnicas"] = data[characteristic_columns].apply(
-    lambda row: ";".join([str(x) for x in row if pd.notnull(x)]), axis=1
+# Consolidar las columnas de locomoción en una sola columna "LocomocionUnica"
+locomotion_columns = ["Locomocion1", "Locomocion2", "Locomocion3"]
+data["LocomocionUnica"] = data[locomotion_columns].apply(
+    lambda row: ";".join([str(x) for x in row if pd.notnull(x) and x != "None"]),
+    axis=1,
 )
 
-# Crear dummies para las características únicas
-dummies = data["CaracteristicasUnicas"].str.get_dummies(sep=";")
+# Crear dummies para la columna "LocomocionUnica"
+locomotion_dummies = data["LocomocionUnica"].str.get_dummies(sep=";")
 
-# Añadir las columnas dummy de CaracteristicasUnicas al dataframe original
-data = pd.concat([data, dummies], axis=1)
+# Consolidar las columnas de características múltiples en una sola columna "CaracteristicasUnicas"
+characteristic_columns = [
+    "Caracteristica",
+    "Caracteristica2",
+    "Caracteristica3",
+    "Caracteristica4",
+    "Caracteristica5",
+]
+data["CaracteristicasUnicas"] = data[characteristic_columns].apply(
+    lambda row: ";".join([str(x) for x in row if pd.notnull(x) and x != "None"]),
+    axis=1,
+)
+
+# Crear dummies para la columna "CaracteristicasUnicas"
+characteristic_dummies = data["CaracteristicasUnicas"].str.get_dummies(sep=";")
+
+# Añadir las columnas dummy de LocomocionUnica y CaracteristicasUnicas al dataframe original
+data = pd.concat([data, locomotion_dummies, characteristic_dummies], axis=1)
 
 # Convertir las demás columnas categóricas en variables dummy
 data = pd.get_dummies(
@@ -39,49 +55,28 @@ data = pd.get_dummies(
 )
 
 # Eliminar columnas innecesarias
-data = data.drop(columns=["Caracteristica", "Caracteristica2", "CaracteristicasUnicas"])
+columns_to_drop = (
+    locomotion_columns
+    + characteristic_columns
+    + [
+        "LocomocionUnica",
+        "CaracteristicasUnicas",
+    ]
+)
+data = data.drop(columns=columns_to_drop)
 
 # Mostrar el dataframe procesado
 column_list = data.drop(columns=["Animal"]).columns.tolist()
-print(column_list, len(column_list))
-print(data[data["Animal"] == "Cabra"][["Cuernos"]])
+# print(column_list, len(column_list))
 
 # Separar las características (X) y la etiqueta (y)
 X = data.drop(columns=["Animal"])
 y = data["Animal"]
 
-# Dividir en conjunto de entrenamiento y conjunto de prueba aunque el entrenamiento será con el 100% de los datos
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.99)
-
-# Crear y entrenar el modelo de árbol de decisión
-model = DecisionTreeClassifier(max_depth=45)
-model.fit(X, y)
-
-# ----------------------------------EVALUACION DEL MODELO----------------------------------
-
-# Hacer predicciones (testear el modelo)
-pred = model.predict(X_test)
-comparativa = {"predicciones": pred, "valor real": y_test}
-result = pd.DataFrame(comparativa)
-print(result)
-print(f"Precisión del modelo: {(model.score(X_test, y_test)*100):.2f}%")
-
-# Visualizar el árbol de decisión (opcional)
-# plt.figure(figsize=(20, 10))
-# plot_tree(
-#     model,
-#     filled=True,
-#     feature_names=X.columns,
-#     class_names=y.unique(),
-#     rounded=True,
-#     fontsize=10,
-# )
-# plt.show()
-
 # ----------------------------------GENERACION DE PREGUNTAS DINAMICAS----------------------------------
 
 # Cargar el diccionario
-df = pd.read_csv("./Diccionario alpha.csv")
+df = pd.read_csv("./Diccionario beta.csv")
 criteria_dict = dict(zip(df["Criterio"], df["Puente"]))
 
 
@@ -105,7 +100,13 @@ def generate_questions(Features, criteria_dict):
 # Generar preguntas
 questions = generate_questions(X.columns, criteria_dict)
 
-# ----------------------------------EXPORTACION DEL MODELO----------------------------------
+# ----------------------------------EXPORTACION DE MULTIPLES MODELO----------------------------------
+
+models = [
+    {"name": "animal_tree_1.json", "max_depth": 37},
+    {"name": "animal_tree_2.json", "max_depth": 36},
+    {"name": "animal_tree_3.json", "max_depth": 40},
+]
 
 
 # Función para convertir el árbol de decisión en JSON
@@ -134,7 +135,23 @@ def tree_to_json(tree, feature_names, class_names):
     return recurse(0)
 
 
-# Exportar el árbol como JSON
-tree_json = tree_to_json(model, questions, model.classes_)
-with open("animal_tree.json", "w") as f:
-    json.dump(tree_json, f, indent=2)
+# Función para entrenar y exportar un modelo
+def train_and_export_tree(config, X, y, questions):
+    # Crear y entrenar el modelo con la configuración actual
+    model = DecisionTreeClassifier(max_depth=config["max_depth"])
+    model.fit(X, y)
+
+    # Exportar el árbol a JSON
+    tree_json = tree_to_json(model, questions, model.classes_)
+    with open(config["name"], "w") as f:
+        json.dump(tree_json, f, indent=2)
+
+    # Mostrar el mensaje de exportación con precisión
+    print(
+        f"Modelo exportado: {config['name']} - Precisión: {model.score(X, y) * 100:.2f}%"
+    )
+
+
+# Entrenar y exportar cada modelo
+for config in models:
+    train_and_export_tree(config, X, y, questions)

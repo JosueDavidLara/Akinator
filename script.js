@@ -1,31 +1,32 @@
 let tree = null;
 let currentNode = null;
 
-// Cargar el JSON del árbol
-// Seleccionar aleatoriamente un árbol de los tres disponibles
-async function loadTree() {
-  try {
-    // Crear una lista con los nombres de los archivos JSON
-    const treeFiles = [
-      "animal_tree_1.json",
-      "animal_tree_2.json",
-      "animal_tree_3.json",
-    ];
+// Inicializar el juego y seleccionar aleatoriamente un modelo
+function initializeGame() {
+  const treeFiles = [
+    "animal_tree_1.json",
+    "animal_tree_2.json",
+    "animal_tree_3.json",
+  ];
 
-    // Elegir aleatoriamente uno de los archivos
-    const randomIndex = Math.floor(Math.random() * treeFiles.length);
-    const selectedTree = treeFiles[randomIndex];
+  const randomIndex = Math.floor(Math.random() * treeFiles.length);
+  const selectedTree = treeFiles[randomIndex];
 
-    // Cargar el archivo seleccionado
-    const response = await fetch(selectedTree);
-    tree = await response.json();
-    currentNode = tree;
-    showQuestion();
-  } catch (error) {
-    console.error("Error al cargar el árbol:", error);
-    document.getElementById("question").textContent =
-      "Error al cargar el juego. Por favor, intenta de nuevo más tarde.";
-  }
+  console.log(`Modelo cargado: ${selectedTree}`); // Mostrar el modelo cargado en la consola
+
+  // Cargar el modelo seleccionado
+  fetch(selectedTree)
+    .then((response) => response.json())
+    .then((data) => {
+      tree = data;
+      currentNode = tree;
+      showQuestion();
+    })
+    .catch((error) => {
+      console.error("Error al cargar el árbol:", error);
+      document.getElementById("question").textContent =
+        "Error al cargar el juego. Por favor, intenta de nuevo más tarde.";
+    });
 }
 
 // Mostrar la pregunta o predicción
@@ -65,9 +66,9 @@ function answerNo() {
   }
 }
 
+// Modificar la función playAgain para reiniciar todo
 function playAgain() {
-  currentNode = tree;
-  showQuestion();
+  initializeGame();
 }
 
 // Cargar el CSV y generar la lista
@@ -167,8 +168,8 @@ function toggleSidebar() {
   }
 }
 
-// Cargar datos al iniciar
+// Llamar a initializeGame al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
-  loadTree();
+  initializeGame();
   loadAnimalData();
 });

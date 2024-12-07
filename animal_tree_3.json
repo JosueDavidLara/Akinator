@@ -1,661 +1,231 @@
 {
-  "question": "\u00bfTu animal tiene 10 patas?",
+  "question": "\u00bfTu animal tiene tentaculos?",
   "threshold": 0.5,
   "yes": {
-    "question": "\u00bfTu animal es un molusco?",
+    "question": "\u00bfTu animal produce electricidad?",
     "threshold": 0.5,
     "yes": {
-      "prediction": "Calamar"
+      "prediction": "Medusa"
     },
     "no": {
-      "prediction": "Camaron"
+      "question": "\u00bfTu animal tiene 8 patas?",
+      "threshold": 0.5,
+      "yes": {
+        "prediction": "Pulpo"
+      },
+      "no": {
+        "prediction": "Calamar"
+      }
     }
   },
   "no": {
-    "question": "\u00bfTu animal es verde?",
+    "question": "\u00bfTu animal es un pez?",
     "threshold": 0.5,
     "yes": {
-      "question": "\u00bfTu animal es reptil?",
+      "question": "\u00bfTu animal es ovoviviparo?",
       "threshold": 0.5,
       "yes": {
-        "prediction": "Iguana"
+        "question": "\u00bfTu animal es plano?",
+        "threshold": 0.5,
+        "yes": {
+          "prediction": "Mantarraya"
+        },
+        "no": {
+          "prediction": "Tiburon"
+        }
       },
       "no": {
-        "prediction": "Loro"
+        "question": "\u00bfTu animal ataca en cardumenes?",
+        "threshold": 0.5,
+        "yes": {
+          "prediction": "Pirana"
+        },
+        "no": {
+          "question": "\u00bfTu animal es omnivoro?",
+          "threshold": 0.5,
+          "yes": {
+            "prediction": "Pez Payaso"
+          },
+          "no": {
+            "question": "\u00bfTu animal tiene embarazo masculino?",
+            "threshold": 0.5,
+            "yes": {
+              "prediction": "Caballito de Mar"
+            },
+            "no": {
+              "question": "\u00bfTu animal destaca por su pico?",
+              "threshold": 0.5,
+              "yes": {
+                "prediction": "Pez Espada"
+              },
+              "no": {
+                "prediction": "Anguila"
+              }
+            }
+          }
+        }
       }
     },
     "no": {
-      "question": "\u00bfTu animal tiene joroba?",
+      "question": "\u00bfTu animal tiene puas?",
       "threshold": 0.5,
       "yes": {
-        "prediction": "Camello"
-      },
-      "no": {
-        "question": "\u00bfTu animal se usa como nombre de marca?",
+        "question": "\u00bfTu animal es herviboro?",
         "threshold": 0.5,
         "yes": {
-          "prediction": "Puma"
+          "prediction": "Puercoespin"
         },
         "no": {
-          "question": "\u00bfTu animal es canino?",
+          "prediction": "Erizo"
+        }
+      },
+      "no": {
+        "question": "\u00bfTu animal vive en el desierto?",
+        "threshold": 0.5,
+        "yes": {
+          "prediction": "Camello"
+        },
+        "no": {
+          "question": "\u00bfTu animal salta?",
           "threshold": 0.5,
           "yes": {
-            "question": "\u00bfTu animal ladra?",
+            "question": "\u00bfTu animal tiene pelaje?",
             "threshold": 0.5,
             "yes": {
-              "prediction": "Perro"
-            },
-            "no": {
-              "question": "\u00bfTu animal es omnivoro?",
+              "question": "\u00bfTu animal es pequeno?",
               "threshold": 0.5,
               "yes": {
-                "prediction": "Zorro"
+                "prediction": "Liebre"
               },
               "no": {
-                "prediction": "Lobo"
+                "prediction": "Canguro"
               }
-            }
-          },
-          "no": {
-            "question": "\u00bfTu animal produce leche?",
-            "threshold": 0.5,
-            "yes": {
-              "prediction": "Vaca"
             },
             "no": {
               "question": "\u00bfTu animal es pequeno?",
               "threshold": 0.5,
               "yes": {
-                "question": "\u00bfTu animal es herviboro?",
+                "question": "\u00bfTu animal es venenoso?",
                 "threshold": 0.5,
                 "yes": {
-                  "question": "\u00bfTu animal tiene embarazo masculino?",
-                  "threshold": 0.5,
-                  "yes": {
-                    "prediction": "Caballito de Mar"
-                  },
-                  "no": {
-                    "question": "\u00bfTu animal tiene 2 patas?",
-                    "threshold": 0.5,
-                    "yes": {
-                      "question": "\u00bfTu animal se alimenta de polen?",
-                      "threshold": 0.5,
-                      "yes": {
-                        "prediction": "Colibri"
-                      },
-                      "no": {
-                        "prediction": "Tucan"
-                      }
-                    },
-                    "no": {
-                      "question": "\u00bfTu animal es un insecto?",
-                      "threshold": 0.5,
-                      "yes": {
-                        "question": "\u00bfTu animal tiene exoesqueleto?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "question": "\u00bfTu animal salta?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Saltamontes"
-                          },
-                          "no": {
-                            "prediction": "Mariposa"
-                          }
-                        },
-                        "no": {
-                          "prediction": "Gusano"
-                        }
-                      },
-                      "no": {
-                        "question": "\u00bfTu animal tiene la piel desnuda?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Caracol"
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal come eucalipto?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Koala"
-                          },
-                          "no": {
-                            "question": "\u00bfTu animal escala?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Ardilla"
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal se roedor?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Hamster"
-                              },
-                              "no": {
-                                "question": "\u00bfTu animal tiene caparazon?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Armadillo"
-                                },
-                                "no": {
-                                  "question": "\u00bfTu animal es domestico?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Conejo"
-                                  },
-                                  "no": {
-                                    "question": "\u00bfTu animal es subterraneo?",
-                                    "threshold": 0.5,
-                                    "yes": {
-                                      "prediction": "Topo"
-                                    },
-                                    "no": {
-                                      "prediction": "Castor"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                  "prediction": "Sapo"
                 },
                 "no": {
-                  "question": "\u00bfTu animal es domestico?",
+                  "prediction": "Rana"
+                }
+              },
+              "no": {
+                "prediction": "Saltamontes"
+              }
+            }
+          },
+          "no": {
+            "question": "\u00bfTu animal es acuatico?",
+            "threshold": 0.5,
+            "yes": {
+              "question": "\u00bfTu animal tiene 4 patas?",
+              "threshold": 0.5,
+              "yes": {
+                "question": "\u00bfTu animal tiene caparazon?",
+                "threshold": 0.5,
+                "yes": {
+                  "prediction": "Tortuga"
+                },
+                "no": {
+                  "question": "\u00bfTu animal es pequeno?",
                   "threshold": 0.5,
                   "yes": {
                     "question": "\u00bfTu animal es viviparo?",
                     "threshold": 0.5,
                     "yes": {
-                      "prediction": "Gato"
-                    },
-                    "no": {
-                      "question": "\u00bfTu animal tiene 4 patas?",
+                      "question": "\u00bfTu animal es omnivoro?",
                       "threshold": 0.5,
                       "yes": {
-                        "prediction": "Tortuga"
+                        "prediction": "Nutria"
                       },
                       "no": {
-                        "question": "\u00bfTu animal es ganado?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Gallina"
-                        },
-                        "no": {
-                          "prediction": "Paloma"
-                        }
+                        "prediction": "Castor"
                       }
+                    },
+                    "no": {
+                      "prediction": "Ornitorrinco"
                     }
                   },
                   "no": {
-                    "question": "\u00bfTu animal destaca por su pico?",
+                    "question": "\u00bfTu animal tiene piel desnuda ?",
                     "threshold": 0.5,
                     "yes": {
-                      "question": "\u00bfTu animal tiene 4 patas?",
-                      "threshold": 0.5,
-                      "yes": {
-                        "prediction": "Ornitorrinco"
-                      },
-                      "no": {
-                        "question": "\u00bfTu animal construye?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Pajaro Carpintero"
-                        },
-                        "no": {
-                          "prediction": "Gaviota"
-                        }
-                      }
+                      "prediction": "Hipopotamo"
                     },
                     "no": {
-                      "question": "\u00bfTu animal tiene la piel desnuda?",
+                      "question": "\u00bfTu animal vive en el pantano?",
                       "threshold": 0.5,
                       "yes": {
-                        "question": "\u00bfTu animal tiene mas de 10 patas?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Estrella de Mar"
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal es terrestre?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Sapo"
-                          },
-                          "no": {
-                            "prediction": "Rana"
-                          }
-                        }
+                        "prediction": "Cocodrilo"
                       },
                       "no": {
-                        "question": "\u00bfTu animal tiene 6 patas?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "question": "\u00bfTu animal es volador?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "question": "\u00bfTu animal vive en una colonia?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "question": "\u00bfTu animal produce miel?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Abeja"
-                              },
-                              "no": {
-                                "prediction": "Avispa"
-                              }
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal zumba?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "question": "\u00bfTu animal vive/busca entre la basura?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Mosca"
-                                },
-                                "no": {
-                                  "prediction": "Mosquito"
-                                }
-                              },
-                              "no": {
-                                "prediction": "Cucaracha"
-                              }
-                            }
-                          },
-                          "no": {
-                            "prediction": "Hormiga"
-                          }
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal tiene 2 patas?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "question": "\u00bfTu animal es viviparo?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Murcielago"
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal destaca por su inteligencia?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Cuervo"
-                              },
-                              "no": {
-                                "prediction": "Buho"
-                              }
-                            }
-                          },
-                          "no": {
-                            "question": "\u00bfTu animal es mamifero?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "question": "\u00bfTu animal se roedor?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Raton"
-                              },
-                              "no": {
-                                "question": "\u00bfTu animal es jugueton ?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Nutria"
-                                },
-                                "no": {
-                                  "question": "\u00bfTu animal tiene puas?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Erizo"
-                                  },
-                                  "no": {
-                                    "prediction": "Suricata"
-                                  }
-                                }
-                              }
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal tiene exoesqueleto?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "question": "\u00bfTu animal tiene 8 patas?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "question": "\u00bfTu animal es un insecto?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "question": "\u00bfTu animal es venenoso?",
-                                    "threshold": 0.5,
-                                    "yes": {
-                                      "prediction": "Alacran"
-                                    },
-                                    "no": {
-                                      "prediction": "Arana"
-                                    }
-                                  },
-                                  "no": {
-                                    "prediction": "Cangrejo"
-                                  }
-                                },
-                                "no": {
-                                  "prediction": "Ciempies"
-                                }
-                              },
-                              "no": {
-                                "question": "\u00bfTu animal tiene 4 patas?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Geco"
-                                },
-                                "no": {
-                                  "question": "\u00bfTu animal tiene muchos dientes?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Pirana"
-                                  },
-                                  "no": {
-                                    "prediction": "Pez Payaso"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
+                        "prediction": "Oso Polar"
                       }
                     }
                   }
                 }
               },
               "no": {
-                "question": "\u00bfTu animal destaca por su vision?",
+                "question": "\u00bfTu animal tiene mas de 10 patas?",
                 "threshold": 0.5,
                 "yes": {
-                  "prediction": "Aguila"
+                  "prediction": "Estrella de Mar"
                 },
                 "no": {
-                  "question": "\u00bfTu animal tiene pelaje?",
+                  "question": "\u00bfTu animal es pequeno?",
                   "threshold": 0.5,
                   "yes": {
-                    "question": "\u00bfTu animal es negro?",
+                    "question": "\u00bfTu animal tiene tenazas?",
                     "threshold": 0.5,
                     "yes": {
-                      "prediction": "Pantera"
-                    },
-                    "no": {
-                      "question": "\u00bfTu animal se puede cabalgar?",
+                      "question": "\u00bfTu animal tiene 8 patas?",
                       "threshold": 0.5,
                       "yes": {
-                        "prediction": "Caballo"
+                        "prediction": "Cangrejo"
                       },
                       "no": {
-                        "question": "\u00bfTu animal hiberna?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Oso"
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal vive en la selva?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Tigre"
-                          },
-                          "no": {
-                            "question": "\u00bfTu animal tiene un cuerno?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Unicornio"
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal es herviboro?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "question": "\u00bfTu animal tiene puas?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Puercoespin"
-                                },
-                                "no": {
-                                  "question": "\u00bfTu animal salta?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Liebre"
-                                  },
-                                  "no": {
-                                    "question": "\u00bfTu animal es domestico?",
-                                    "threshold": 0.5,
-                                    "yes": {
-                                      "question": "\u00bfTu animal tiene lana?",
-                                      "threshold": 0.5,
-                                      "yes": {
-                                        "prediction": "Oveja"
-                                      },
-                                      "no": {
-                                        "question": "\u00bfTu animal tiene cuernos?",
-                                        "threshold": 0.5,
-                                        "yes": {
-                                          "prediction": "Cabra"
-                                        },
-                                        "no": {
-                                          "prediction": "Burro"
-                                        }
-                                      }
-                                    },
-                                    "no": {
-                                      "question": "\u00bfTu animal tiene 2 patas?",
-                                      "threshold": 0.5,
-                                      "yes": {
-                                        "prediction": "Gorila"
-                                      },
-                                      "no": {
-                                        "question": "\u00bfTu animal destaca por su cuello?",
-                                        "threshold": 0.5,
-                                        "yes": {
-                                          "prediction": "Jirafa"
-                                        },
-                                        "no": {
-                                          "question": "\u00bfTu animal tiene astas?",
-                                          "threshold": 0.5,
-                                          "yes": {
-                                            "prediction": "Venado"
-                                          },
-                                          "no": {
-                                            "question": "\u00bfTu animal come bambu?",
-                                            "threshold": 0.5,
-                                            "yes": {
-                                              "prediction": "Panda"
-                                            },
-                                            "no": {
-                                              "question": "\u00bfTu animal es blanco y negro?",
-                                              "threshold": 0.5,
-                                              "yes": {
-                                                "prediction": "Cebra"
-                                              },
-                                              "no": {
-                                                "question": "\u00bfTu animal parece boxeador?",
-                                                "threshold": 0.5,
-                                                "yes": {
-                                                  "prediction": "Canguro"
-                                                },
-                                                "no": {
-                                                  "prediction": "Toro"
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              },
-                              "no": {
-                                "question": "\u00bfTu animal tiene manchas?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Jaguar"
-                                },
-                                "no": {
-                                  "question": "\u00bfTu animal es ganado?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Cerdo"
-                                  },
-                                  "no": {
-                                    "question": "\u00bfTu animal es terrestre?",
-                                    "threshold": 0.5,
-                                    "yes": {
-                                      "question": "\u00bfTu animal vive en el artico?",
-                                      "threshold": 0.5,
-                                      "yes": {
-                                        "prediction": "Oso Polar"
-                                      },
-                                      "no": {
-                                        "question": "\u00bfTu animal tiene pulgares?",
-                                        "threshold": 0.5,
-                                        "yes": {
-                                          "prediction": "Chimpance"
-                                        },
-                                        "no": {
-                                          "question": "\u00bfTu animal tiene melena?",
-                                          "threshold": 0.5,
-                                          "yes": {
-                                            "prediction": "Leon"
-                                          },
-                                          "no": {
-                                            "question": "\u00bfTu animal vive/busca entre la basura?",
-                                            "threshold": 0.5,
-                                            "yes": {
-                                              "prediction": "Mapache"
-                                            },
-                                            "no": {
-                                              "prediction": "Oso Hormiguero"
-                                            }
-                                          }
-                                        }
-                                      }
-                                    },
-                                    "no": {
-                                      "prediction": "Foca"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
+                        "prediction": "Langosta"
                       }
+                    },
+                    "no": {
+                      "prediction": "Gaviota"
                     }
                   },
                   "no": {
-                    "question": "\u00bfTu animal es una ave?",
+                    "question": "\u00bfTu animal usa smokin?",
                     "threshold": 0.5,
                     "yes": {
                       "question": "\u00bfTu animal es mediano?",
                       "threshold": 0.5,
                       "yes": {
-                        "question": "\u00bfTu animal migra?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "prediction": "Pato"
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal es colorido?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Pavo Real"
-                          },
-                          "no": {
-                            "question": "\u00bfTu animal es omnivoro?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Ganso"
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal es rojo?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Guacamaya"
-                              },
-                              "no": {
-                                "question": "\u00bfTu animal usa smokin?",
-                                "threshold": 0.5,
-                                "yes": {
-                                  "prediction": "Pinguino"
-                                },
-                                "no": {
-                                  "prediction": "Pelicano"
-                                }
-                              }
-                            }
-                          }
-                        }
+                        "prediction": "Pinguino"
                       },
                       "no": {
-                        "question": "\u00bfTu animal es volador?",
-                        "threshold": 0.5,
-                        "yes": {
-                          "question": "\u00bfTu animal destaca por su velocidad?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Halcon"
-                          },
-                          "no": {
-                            "prediction": "Zopilote"
-                          }
-                        },
-                        "no": {
-                          "question": "\u00bfTu animal vive en el artico?",
-                          "threshold": 0.5,
-                          "yes": {
-                            "prediction": "Pinguino Emperador"
-                          },
-                          "no": {
-                            "question": "\u00bfTu animal es rosado?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Flamenco"
-                            },
-                            "no": {
-                              "prediction": "Avestruz"
-                            }
-                          }
-                        }
+                        "prediction": "Pinguino Emperador"
                       }
                     },
                     "no": {
-                      "question": "\u00bfTu animal es reptil?",
+                      "question": "\u00bfTu animal destaca por su cuello?",
                       "threshold": 0.5,
                       "yes": {
-                        "question": "\u00bfTu animal lanza fuego?",
+                        "question": "\u00bfTu animal es rosado?",
                         "threshold": 0.5,
                         "yes": {
-                          "prediction": "Dragon"
+                          "prediction": "Flamenco"
                         },
                         "no": {
-                          "question": "\u00bfTu animal se arrastra?",
+                          "question": "\u00bfTu animal grazna?",
                           "threshold": 0.5,
                           "yes": {
-                            "prediction": "Cocodrilo"
+                            "prediction": "Ganso"
                           },
                           "no": {
-                            "question": "\u00bfTu animal es mediano?",
-                            "threshold": 0.5,
-                            "yes": {
-                              "prediction": "Serpiente"
-                            },
-                            "no": {
-                              "question": "\u00bfTu animal tiene la lengua vipeda?",
-                              "threshold": 0.5,
-                              "yes": {
-                                "prediction": "Dragon de Komodo"
-                              },
-                              "no": {
-                                "prediction": "Camaleon"
-                              }
-                            }
+                            "prediction": "Pelicano"
                           }
                         }
                       },
@@ -666,69 +236,513 @@
                           "prediction": "Delfin"
                         },
                         "no": {
-                          "question": "\u00bfTu animal destaca por sus orejas de Shrek?",
+                          "question": "\u00bfTu animal tiene exoesqueleto ?",
                           "threshold": 0.5,
                           "yes": {
-                            "prediction": "Hipopotamo"
+                            "prediction": "Camaron"
                           },
                           "no": {
-                            "question": "\u00bfTu animal migra?",
+                            "question": "\u00bfTu animal es domestico?",
                             "threshold": 0.5,
                             "yes": {
-                              "prediction": "Ballena"
+                              "prediction": "Pato"
                             },
                             "no": {
-                              "question": "\u00bfTu animal es terrestre?",
+                              "question": "\u00bfTu animal aplaude?",
                               "threshold": 0.5,
                               "yes": {
-                                "question": "\u00bfTu animal tiene un cuerno?",
+                                "prediction": "Foca"
+                              },
+                              "no": {
+                                "question": "\u00bfTu animal es herviboro?",
                                 "threshold": 0.5,
                                 "yes": {
-                                  "prediction": "Rinoceronte"
+                                  "prediction": "Manati"
                                 },
                                 "no": {
-                                  "prediction": "Elefante"
+                                  "prediction": "Ballena"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "no": {
+              "question": "\u00bfTu animal es mensajera?",
+              "threshold": 0.5,
+              "yes": {
+                "prediction": "Paloma"
+              },
+              "no": {
+                "question": "\u00bfTu animal es negro?",
+                "threshold": 0.5,
+                "yes": {
+                  "question": "\u00bfTu animal tiene pulgares?",
+                  "threshold": 0.5,
+                  "yes": {
+                    "prediction": "Gorila"
+                  },
+                  "no": {
+                    "question": "\u00bfTu animal es blanco?",
+                    "threshold": 0.5,
+                    "yes": {
+                      "question": "\u00bfTu animal vive en la sabana?",
+                      "threshold": 0.5,
+                      "yes": {
+                        "prediction": "Cebra"
+                      },
+                      "no": {
+                        "prediction": "Panda"
+                      }
+                    },
+                    "no": {
+                      "question": "\u00bfTu animal tiene pelaje?",
+                      "threshold": 0.5,
+                      "yes": {
+                        "question": "\u00bfTu animal hiberna?",
+                        "threshold": 0.5,
+                        "yes": {
+                          "prediction": "Oso"
+                        },
+                        "no": {
+                          "prediction": "Pantera"
+                        }
+                      },
+                      "no": {
+                        "prediction": "Cuervo"
+                      }
+                    }
+                  }
+                },
+                "no": {
+                  "question": "\u00bfTu animal vive en la selva?",
+                  "threshold": 0.5,
+                  "yes": {
+                    "prediction": "Tigre"
+                  },
+                  "no": {
+                    "question": "\u00bfTu animal tiene 2 patas?",
+                    "threshold": 0.5,
+                    "yes": {
+                      "question": "\u00bfTu animal es mediano?",
+                      "threshold": 0.5,
+                      "yes": {
+                        "question": "\u00bfTu animal es viviparo?",
+                        "threshold": 0.5,
+                        "yes": {
+                          "prediction": "Chimpance"
+                        },
+                        "no": {
+                          "question": "\u00bfTu animal lanza fuego?",
+                          "threshold": 0.5,
+                          "yes": {
+                            "prediction": "Fenix"
+                          },
+                          "no": {
+                            "question": "\u00bfTu animal es omnivoro?",
+                            "threshold": 0.5,
+                            "yes": {
+                              "prediction": "Pavo Real"
+                            },
+                            "no": {
+                              "prediction": "Guacamaya"
+                            }
+                          }
+                        }
+                      },
+                      "no": {
+                        "question": "\u00bfTu animal tiene plumas ?",
+                        "threshold": 0.5,
+                        "yes": {
+                          "question": "\u00bfTu animal es domestico?",
+                          "threshold": 0.5,
+                          "yes": {
+                            "question": "\u00bfTu animal es herviboro?",
+                            "threshold": 0.5,
+                            "yes": {
+                              "prediction": "Tucan"
+                            },
+                            "no": {
+                              "question": "\u00bfTu animal puede imitar?",
+                              "threshold": 0.5,
+                              "yes": {
+                                "prediction": "Loro"
+                              },
+                              "no": {
+                                "prediction": "Gallina"
+                              }
+                            }
+                          },
+                          "no": {
+                            "question": "\u00bfTu animal es omnivoro?",
+                            "threshold": 0.5,
+                            "yes": {
+                              "question": "\u00bfTu animal es carronero?",
+                              "threshold": 0.5,
+                              "yes": {
+                                "prediction": "Zopilote"
+                              },
+                              "no": {
+                                "question": "\u00bfTu animal es nocturno?",
+                                "threshold": 0.5,
+                                "yes": {
+                                  "prediction": "Buho"
+                                },
+                                "no": {
+                                  "prediction": "Avestruz"
+                                }
+                              }
+                            },
+                            "no": {
+                              "question": "\u00bfTu animal se alimenta de polen?",
+                              "threshold": 0.5,
+                              "yes": {
+                                "prediction": "Colibri"
+                              },
+                              "no": {
+                                "question": "\u00bfTu animal destaca por su pico?",
+                                "threshold": 0.5,
+                                "yes": {
+                                  "prediction": "Pajaro Carpintero"
+                                },
+                                "no": {
+                                  "question": "\u00bfTu animal destaca por su vision?",
+                                  "threshold": 0.5,
+                                  "yes": {
+                                    "prediction": "Aguila"
+                                  },
+                                  "no": {
+                                    "prediction": "Halcon"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "no": {
+                          "prediction": "Murcielago"
+                        }
+                      }
+                    },
+                    "no": {
+                      "question": "\u00bfTu animal lanza fuego?",
+                      "threshold": 0.5,
+                      "yes": {
+                        "prediction": "Dragon"
+                      },
+                      "no": {
+                        "question": "\u00bfTu animal se arrastra?",
+                        "threshold": 0.5,
+                        "yes": {
+                          "prediction": "Lombriz"
+                        },
+                        "no": {
+                          "question": "\u00bfTu animal vive en una colonia?",
+                          "threshold": 0.5,
+                          "yes": {
+                            "question": "\u00bfTu animal es terrestre?",
+                            "threshold": 0.5,
+                            "yes": {
+                              "prediction": "Hormiga"
+                            },
+                            "no": {
+                              "question": "\u00bfTu animal produce miel?",
+                              "threshold": 0.5,
+                              "yes": {
+                                "prediction": "Abeja"
+                              },
+                              "no": {
+                                "prediction": "Avispa"
+                              }
+                            }
+                          },
+                          "no": {
+                            "question": "\u00bfTu animal se alimenta de eucalipto?",
+                            "threshold": 0.5,
+                            "yes": {
+                              "prediction": "Koala"
+                            },
+                            "no": {
+                              "question": "\u00bfTu animal tiene 6 patas?",
+                              "threshold": 0.5,
+                              "yes": {
+                                "question": "\u00bfTu animal se alimenta de polen?",
+                                "threshold": 0.5,
+                                "yes": {
+                                  "prediction": "Mariposa"
+                                },
+                                "no": {
+                                  "question": "\u00bfTu animal es omnivoro?",
+                                  "threshold": 0.5,
+                                  "yes": {
+                                    "question": "\u00bfTu animal es volador?",
+                                    "threshold": 0.5,
+                                    "yes": {
+                                      "prediction": "Mosca"
+                                    },
+                                    "no": {
+                                      "prediction": "Cucaracha"
+                                    }
+                                  },
+                                  "no": {
+                                    "prediction": "Mosquito"
+                                  }
                                 }
                               },
                               "no": {
-                                "question": "\u00bfTu animal produce electricidad?",
+                                "question": "\u00bfTu animal vive/busca entre la basura?",
                                 "threshold": 0.5,
                                 "yes": {
-                                  "question": "\u00bfTu animal tiene tentaculos?",
-                                  "threshold": 0.5,
-                                  "yes": {
-                                    "prediction": "Medusa"
-                                  },
-                                  "no": {
-                                    "prediction": "Anguila"
-                                  }
+                                  "prediction": "Mapache"
                                 },
                                 "no": {
-                                  "question": "\u00bfTu animal es mamifero?",
+                                  "question": "\u00bfTu animal es un molusco?",
                                   "threshold": 0.5,
                                   "yes": {
-                                    "prediction": "Manati"
+                                    "prediction": "Caracol"
                                   },
                                   "no": {
-                                    "question": "\u00bfTu animal tiene 8 patas?",
+                                    "question": "\u00bfTu animal es un insecto?",
                                     "threshold": 0.5,
                                     "yes": {
-                                      "prediction": "Pulpo"
-                                    },
-                                    "no": {
-                                      "question": "\u00bfTu animal destaca por su pico?",
+                                      "question": "\u00bfTu animal es venenoso?",
                                       "threshold": 0.5,
                                       "yes": {
-                                        "prediction": "Pez Espada"
-                                      },
-                                      "no": {
-                                        "question": "\u00bfTu animal tiene muchos dientes?",
+                                        "question": "\u00bfTu animal tiene 8 patas?",
                                         "threshold": 0.5,
                                         "yes": {
-                                          "prediction": "Tiburon"
+                                          "prediction": "Alacran"
                                         },
                                         "no": {
-                                          "prediction": "Mantarraya"
+                                          "prediction": "Ciempies"
+                                        }
+                                      },
+                                      "no": {
+                                        "prediction": "Arana"
+                                      }
+                                    },
+                                    "no": {
+                                      "question": "\u00bfTu animal es un reptil?",
+                                      "threshold": 0.5,
+                                      "yes": {
+                                        "question": "\u00bfTu animal es pequeno?",
+                                        "threshold": 0.5,
+                                        "yes": {
+                                          "question": "\u00bfTu animal escala?",
+                                          "threshold": 0.5,
+                                          "yes": {
+                                            "prediction": "Iguana"
+                                          },
+                                          "no": {
+                                            "question": "\u00bfTu animal se regenera?",
+                                            "threshold": 0.5,
+                                            "yes": {
+                                              "prediction": "Geco"
+                                            },
+                                            "no": {
+                                              "prediction": "Camaleon"
+                                            }
+                                          }
+                                        },
+                                        "no": {
+                                          "question": "\u00bfTu animal es mediano?",
+                                          "threshold": 0.5,
+                                          "yes": {
+                                            "prediction": "Serpiente"
+                                          },
+                                          "no": {
+                                            "prediction": "Dragon de Komodo"
+                                          }
+                                        }
+                                      },
+                                      "no": {
+                                        "question": "\u00bfTu animal es domestico?",
+                                        "threshold": 0.5,
+                                        "yes": {
+                                          "question": "\u00bfTu animal se puede cabalgar?",
+                                          "threshold": 0.5,
+                                          "yes": {
+                                            "prediction": "Caballo"
+                                          },
+                                          "no": {
+                                            "question": "\u00bfTu animal maulla?",
+                                            "threshold": 0.5,
+                                            "yes": {
+                                              "prediction": "Gato"
+                                            },
+                                            "no": {
+                                              "question": "\u00bfTu animal es herviboro?",
+                                              "threshold": 0.5,
+                                              "yes": {
+                                                "question": "\u00bfTu animal vive en granja?",
+                                                "threshold": 0.5,
+                                                "yes": {
+                                                  "question": "\u00bfTu animal tiene cuernos?",
+                                                  "threshold": 0.5,
+                                                  "yes": {
+                                                    "question": "\u00bfTu animal produce leche?",
+                                                    "threshold": 0.5,
+                                                    "yes": {
+                                                      "prediction": "Vaca"
+                                                    },
+                                                    "no": {
+                                                      "question": "\u00bfTu animal es mediano?",
+                                                      "threshold": 0.5,
+                                                      "yes": {
+                                                        "prediction": "Cabra"
+                                                      },
+                                                      "no": {
+                                                        "prediction": "Toro"
+                                                      }
+                                                    }
+                                                  },
+                                                  "no": {
+                                                    "question": "\u00bfTu animal tiene orejas grandes?",
+                                                    "threshold": 0.5,
+                                                    "yes": {
+                                                      "prediction": "Burro"
+                                                    },
+                                                    "no": {
+                                                      "prediction": "Oveja"
+                                                    }
+                                                  }
+                                                },
+                                                "no": {
+                                                  "question": "\u00bfTu animal tiene orejas grandes?",
+                                                  "threshold": 0.5,
+                                                  "yes": {
+                                                    "prediction": "Conejo"
+                                                  },
+                                                  "no": {
+                                                    "prediction": "Hamster"
+                                                  }
+                                                }
+                                              },
+                                              "no": {
+                                                "question": "\u00bfTu animal ladra?",
+                                                "threshold": 0.5,
+                                                "yes": {
+                                                  "prediction": "Perro"
+                                                },
+                                                "no": {
+                                                  "prediction": "Cerdo"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "no": {
+                                          "question": "\u00bfTu animal tiene piel desnuda ?",
+                                          "threshold": 0.5,
+                                          "yes": {
+                                            "question": "\u00bfTu animal tiene cuernos?",
+                                            "threshold": 0.5,
+                                            "yes": {
+                                              "prediction": "Rinoceronte"
+                                            },
+                                            "no": {
+                                              "prediction": "Elefante"
+                                            }
+                                          },
+                                          "no": {
+                                            "question": "\u00bfTu animal es un felino?",
+                                            "threshold": 0.5,
+                                            "yes": {
+                                              "question": "\u00bfTu animal vive en la sabana?",
+                                              "threshold": 0.5,
+                                              "yes": {
+                                                "prediction": "Leon"
+                                              },
+                                              "no": {
+                                                "question": "\u00bfTu animal tiene manchas?",
+                                                "threshold": 0.5,
+                                                "yes": {
+                                                  "prediction": "Jaguar"
+                                                },
+                                                "no": {
+                                                  "prediction": "Puma"
+                                                }
+                                              }
+                                            },
+                                            "no": {
+                                              "question": "\u00bfTu animal tiene pelaje?",
+                                              "threshold": 0.5,
+                                              "yes": {
+                                                "question": "\u00bfTu animal tiene manchas?",
+                                                "threshold": 0.5,
+                                                "yes": {
+                                                  "prediction": "Jirafa"
+                                                },
+                                                "no": {
+                                                  "question": "\u00bfTu animal escala?",
+                                                  "threshold": 0.5,
+                                                  "yes": {
+                                                    "prediction": "Ardilla"
+                                                  },
+                                                  "no": {
+                                                    "question": "\u00bfTu animal es herviboro?",
+                                                    "threshold": 0.5,
+                                                    "yes": {
+                                                      "question": "\u00bfTu animal tiene astas?",
+                                                      "threshold": 0.5,
+                                                      "yes": {
+                                                        "prediction": "Venado"
+                                                      },
+                                                      "no": {
+                                                        "question": "\u00bfTu animal es subterraneo?",
+                                                        "threshold": 0.5,
+                                                        "yes": {
+                                                          "prediction": "Topo"
+                                                        },
+                                                        "no": {
+                                                          "prediction": "Unicornio"
+                                                        }
+                                                      }
+                                                    },
+                                                    "no": {
+                                                      "question": "\u00bfTu animal tiene trompa?",
+                                                      "threshold": 0.5,
+                                                      "yes": {
+                                                        "prediction": "Oso Hormiguero"
+                                                      },
+                                                      "no": {
+                                                        "question": "\u00bfTu animal vive en la sabana?",
+                                                        "threshold": 0.5,
+                                                        "yes": {
+                                                          "prediction": "Suricata"
+                                                        },
+                                                        "no": {
+                                                          "question": "\u00bfTu animal aulla?",
+                                                          "threshold": 0.5,
+                                                          "yes": {
+                                                            "prediction": "Lobo"
+                                                          },
+                                                          "no": {
+                                                            "question": "\u00bfTu animal es un roedor?",
+                                                            "threshold": 0.5,
+                                                            "yes": {
+                                                              "prediction": "Raton"
+                                                            },
+                                                            "no": {
+                                                              "prediction": "Zorro"
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "no": {
+                                                "prediction": "Armadillo"
+                                              }
+                                            }
+                                          }
                                         }
                                       }
                                     }
