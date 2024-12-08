@@ -42,14 +42,21 @@ git clone https://github.com/JosueDavidLara/Akinator.git
 cd Akinator
 ```
 
-#### Iniciar un Servidor Local
+#### 3. Ejecutar el modelo.py
+Ejecutar en la consola el modelo.py para generar nuevos modelos si los deseas, asegurese de que los modelos se exportan con el 100% de precisión.
+
+```bash
+modelo.py
+```
+
+#### 4. Iniciar un Servidor Local
 Ejecutar el siguiente comando para iniciar un servidor web local:
 
 ```bash
 python -m http.server
 ```
 
-#### Abrir en el Navegador
+#### 5. Abrir en el Navegador
 Abrir el navegador y acceder a http://localhost:8000.
 
 ¡Y listo! Ahora puedes interactuar con el Akinator de animales y probar la funcionalidad de adivinación.
