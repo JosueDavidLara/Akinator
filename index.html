@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinador de Animales</title>
     <link rel="shortcut icon" href="./images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
@@ -25,14 +25,16 @@
             <ul id="animalList"></ul>
         </div>
         <div id="animalDetailsContainer" style="display: none;">
-            <button class="back-button" onclick="showAnimalList()">Atrás</button>
-            <h2 id="animalName"></h2>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <h2 id="animalName"></h2>
+              <button class="back-button" onclick="showAnimalList()">Atrás</button>
+            </div>
             <p id="animalDetails"></p>
         </div>
     </div>
 
     <div class="container">
-        <img src="recursos/genio.png" alt="Genio" class="genio">
+        <img src="./images/genio.png" alt="Genio" class="genio">
         <h1>Adivinando el animal</h1>
         <div id="question">Cargando...</div>
         <div class="buttons">

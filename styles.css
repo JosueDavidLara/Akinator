@@ -5,7 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url('recursos/wallpaper.jpg');
+  background-image: url('./images/wallpaper.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -173,9 +173,243 @@ button:hover {
 
 #animalDetailsContainer {
   padding: 1em;
-  background: #f9f9f9;
+  background: transparent;
   border-radius: 5px;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('./images/wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+}
+
+.genio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  z-index: -1;
+}
+
+h1 {
+  color: #333;
+}
+
+#question {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#yes {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#no {
+  background-color: #f44336;
+  color: white;
+}
+
+#playAgain {
+  background-color: #2196F3;
+  color: white;
+  display: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Botón de menú */
+.menu-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: transform 0.3s ease-in-out, opacity 0.3s;
+}
+
+.menu-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-button i {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Barra lateral */
+.sidebar {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0; /* Se ajustará mediante transform */
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transform: translateX(100%); /* Fuera de la pantalla */
+  transition: transform 0.3s ease-in-out;
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* Visible */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar input {
+  width: 95%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar ul li:last-child {
+  border-bottom: none;
+  
+}
+
+.sidebar .close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #f44336;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-details-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+.animal-name {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.animal-info {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.animal-info li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.animal-info li:last-child {
+  border-bottom: none;
+}
+
+.caracteristicas {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.caracteristicas li {
+  margin: 4px 0;
+}
+
+.back-button {
+  margin-bottom: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  height: 50px;
+  padding: 0px 0px 0px 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #0056b3;
+}
+
 
 .back-button {
   margin-bottom: 10px;

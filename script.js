@@ -103,27 +103,53 @@ function showAnimalDetails(animal) {
   const domestico = animal.Domestico === "1" ? "Sí" : "No";
   const mitologico = animal.Mitologico === "1" ? "Sí" : "No";
 
+  // Filtrar locomociones válidas (excluir "None")
+  const locomociones = [
+    animal.Locomocion1,
+    animal.Locomocion2,
+    animal.Locomocion3,
+  ].filter((locomocion) => locomocion && locomocion !== "None");
+
+  // Filtrar características válidas (excluir "None")
+  const caracteristicas = [
+    animal.Caracteristica,
+    animal.Caracteristica2,
+    animal.Caracteristica3,
+    animal.Caracteristica4,
+    animal.Caracteristica5,
+  ].filter((caracteristica) => caracteristica && caracteristica !== "None");
+
   document.getElementById("animalListContainer").style.display = "none";
   document.getElementById("animalDetailsContainer").style.display = "block";
 
-  // Crear la vista detallada
+  // Crear la vista detallada con diseño más estético
   const detailsHTML = `
-        <strong>Animal:</strong> ${animal.Animal}<br>
-        <strong>Clasificación:</strong> ${animal.Clasificacion}<br>
-        <strong>Locomoción:</strong> ${animal.Locomocion}<br>
-        <strong>Tamaño:</strong> ${animal.Tamano}<br>
-        <strong>Dieta:</strong> ${animal.Dieta}<br>
-        <strong>Reproducción:</strong> ${animal.Reproduccion}<br>
-        <strong>Patas:</strong> ${animal.Patas}<br>
-        <strong>Piel:</strong> ${animal.Piel}<br>
-        <strong>Doméstico:</strong> ${domestico}<br>
-        <strong>Mitológico:</strong> ${mitologico}<br>
-        <strong>Características:</strong>
-        <ul>
-            <li>${animal.Caracteristica}</li>
-            <li>${animal.Caracteristica2}</li>
+    <div class="animal-details-card">
+        <ul class="animal-info">
+            <li><strong>Vertebrado:</strong> ${
+              animal.Vertebrado === "1" ? "Sí" : "No"
+            }</li>
+            <li><strong>Clasificación:</strong> ${animal.Clasificacion}</li>
+            <li><strong>Locomoción:</strong> ${
+              locomociones.join(", ") || "No especificada"
+            }</li>
+            <li><strong>Tamaño:</strong> ${animal.Tamano}</li>
+            <li><strong>Dieta:</strong> ${animal.Dieta}</li>
+            <li><strong>Reproducción:</strong> ${animal.Reproduccion}</li>
+            <li><strong>Patas:</strong> ${animal.Patas}</li>
+            <li><strong>Piel:</strong> ${animal.Piel}</li>
+            <li><strong>Doméstico:</strong> ${domestico}</li>
+            <li><strong>Mitológico:</strong> ${mitologico}</li>
+            <li><strong>Características:</strong> ${
+              caracteristicas.length > 0
+                ? `<ul class="caracteristicas">${caracteristicas
+                    .map((caracteristica) => `<li>${caracteristica}</li>`)
+                    .join("")}</ul>`
+                : "No especificadas"
+            }</li>
         </ul>
-    `;
+    </div>
+  `;
 
   document.getElementById("animalName").textContent = animal.Animal;
   document.getElementById("animalDetails").innerHTML = detailsHTML;
