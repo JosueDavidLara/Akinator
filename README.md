@@ -46,7 +46,7 @@ cd Akinator
 Ejecutar en la consola el modelo.py para generar nuevos modelos si los deseas, asegurese de que los modelos se exportan con el 100% de precisión.
 
 ```bash
-modelo.py
+python modelo.py
 ```
 
 #### 4. Iniciar un Servidor Local
